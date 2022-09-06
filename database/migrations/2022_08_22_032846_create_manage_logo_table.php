@@ -28,6 +28,6 @@ class CreateManageLogoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manage_logo');
+        Schema::dropIfExists('manage_logos');
     }
 }

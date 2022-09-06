@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypePropertyTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTypePropertyTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_property', function (Blueprint $table) {
+        Schema::create('role', function (Blueprint $table) {
             $table->id();
-            $table->string('type', 55)->nullable();
+            $table->string('name',255);
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTypePropertyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_property');
+        Schema::dropIfExists('role');
     }
 }
