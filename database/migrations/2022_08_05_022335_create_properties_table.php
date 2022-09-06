@@ -14,7 +14,7 @@ class CreatePropertiesTable extends Migration
     public function up()
     {
         Schema::create('property', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id');
             $table->integer('user_id');
             $table->string('name', 255)->nullable();
             $table->string('image', 255)->nullable();
@@ -25,7 +25,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('province_id');
             $table->longtext('description')->nullable();
             $table->integer('type_property_id');
-            $table->bigint('ads_id', 20);
+            $table->integer('ads_id');
             $table->integer('bedroom');
             $table->integer('bathroom');
             $table->integer('garage');

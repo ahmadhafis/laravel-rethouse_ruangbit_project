@@ -14,7 +14,7 @@ class CreateTableAdLists extends Migration
     public function up()
     {
         Schema::create('ad_lists', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id');
             $table->string('title', 100)->nullable();
             $table->string('description', 255);
             $table->integer('ad_price');

@@ -14,8 +14,8 @@ class CreateTypePropertyTable extends Migration
     public function up()
     {
         Schema::create('type_property', function (Blueprint $table) {
-            $table->id();
-            $table->string('type', 55)->nullable();
+            $table->integer('id');
+            $table->string('name', 255)->nullable();
             $table->timestamps();
         });
     }
