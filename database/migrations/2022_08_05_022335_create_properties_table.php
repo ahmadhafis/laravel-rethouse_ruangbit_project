@@ -34,11 +34,6 @@ class CreatePropertiesTable extends Migration
             $table->string('image_transaction', 255)->nullable();
             $table->date('start_ads')->nullable();
             $table->date('end_ads')->nullable();
-            $table->foreign('city_id')->references('id')->on('city')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign('province_id')->references('id')->on('province')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign('type_property_id')->references('id')->on('type_property')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign('ads_id')->references('id')->on('ad_lists')->onDelete('NULL');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('restrict')->onDelete('restrict');
             $table->timestamps();
         });
     }
